@@ -6,7 +6,7 @@ require_relative("../models/artist")
 artist1 = Artist.new({"name" => "queen"})
 artist1.save
 
-album1 = Album.new({"title" => "a night at the opera", "genre" => "rock", "artist_id" => "1"})
+album1 = Album.new({"title" => "a night at the opera", "genre" => "rock", "artist_id" => artist1.id})
 album1.save
 
 
