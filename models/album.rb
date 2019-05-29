@@ -53,7 +53,7 @@ class Album
   end
 
   def delete()
-    sql = "DELETE FROM albums WHEREs id = $1"
+    sql = "DELETE FROM albums WHERE id = $1"
     values = [@id]
     SqlRunner.run(sql, values)
   end
