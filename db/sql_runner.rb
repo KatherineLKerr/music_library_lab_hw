@@ -2,7 +2,7 @@ require("pg")
 
 class SqlRunner
 
-  def self.run(sql, values = []) #default parameters (values = []) always go last..b/c of some ordering issue...
+  def self.run(sql, values = [])
     begin
       db = PG.connect({dbname: "music_app", host: "localhost"})
       db.prepare("query", sql)
